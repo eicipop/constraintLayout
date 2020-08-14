@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ffffff"
+        android:padding="10dp"
+        tools:context=".MainActivity">
+
+        <ImageView
+            android:id="@+id/imgViewArrow"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/back"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/txtAddCareer"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+
+            android:id="@+id/txtAddCareer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="참여 이력 추가"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            app:layout_constraintLeft_toRightOf="@+id/imgViewArrow"
+            app:layout_constraintRight_toLeftOf="@id/txtSave"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txtSave"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="저장"
+            android:textColor="#aaaaaa"
+            android:textSize="17sp"
+            app:layout_constraintLeft_toRightOf="@+id/txtAddCareer"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/txtProjectName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="프로젝트 명"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtAddCareer" />
+
+        <EditText
+            android:id="@+id/edtTxtProject"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="7dp"
+            android:background="@drawable/border"
+            android:cursorVisible="true"
+            android:paddingLeft="14dp"
+            android:singleLine="true"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            app:layout_constraintTop_toBottomOf="@+id/txtProjectName" />
+
+        <TextView
+            android:id="@+id/txtClientName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="주관 업체 명"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/edtTxtProject" />
+
+        <EditText
+            android:id="@+id/edtTxtClient"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="7dp"
+            android:background="@drawable/border"
+            android:cursorVisible="true"
+            android:paddingLeft="14dp"
+            android:singleLine="true"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            app:layout_constraintTop_toBottomOf="@+id/txtClientName" />
+
+        <TextView
+            android:id="@+id/txtDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="프로젝트 설명"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/edtTxtClient" />
+
+        <EditText
+            android:id="@+id/edtTxtDescription"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_marginTop="7dp"
+            android:background="@drawable/border"
+            android:cursorVisible="true"
+            android:paddingLeft="14dp"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintTop_toBottomOf="@+id/txtDescription" />
+
+        <TextView
+            android:id="@+id/txtReferenceURL"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="참고 URL"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/txtDetail"
+            app:layout_constraintTop_toBottomOf="@id/edtTxtDescription" />
+
+        <TextView
+            android:id="@+id/txtDetail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="웹사이트 링크/앱다운로드 링크"
+            android:textColor="#9E9C9C"
+            android:textSize="15sp"
+            app:layout_constraintLeft_toRightOf="@+id/txtReferenceURL"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/edtTxtDescription" />
+
+        <EditText
+            android:id="@+id/edtTxtReferenceURL"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="7dp"
+            android:background="@drawable/border"
+            android:cursorVisible="true"
+            android:hint="(선택사항)"
+            android:paddingLeft="14dp"
+            android:singleLine="true"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            app:layout_constraintTop_toBottomOf="@+id/txtReferenceURL" />
+
+        <TextView
+            android:id="@+id/txtParticipationPeriod"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="참여 기간"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/edtTxtReferenceURL" />
+
+        <EditText
+            android:id="@+id/edtTxtFromYear"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="7dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/border"
+            android:cursorVisible="true"
+            android:paddingLeft="14dp"
+            android:singleLine="true"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtParticipationPeriod" />
+
+        <View
+            android:id="@+id/line"
+            android:layout_width="20dp"
+            android:layout_height="2px"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="20dp"
+            android:background="#000000"
+            app:layout_constraintBottom_toBottomOf="@+id/edtTxtFromYear"
+            app:layout_constraintLeft_toRightOf="@+id/edtTxtFromYear"
+            app:layout_constraintRight_toLeftOf="@+id/edtTxtToYear"
+
+            />
+
+        <EditText
+            android:id="@+id/edtTxtToYear"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="7dp"
+            android:background="@drawable/border"
+            android:cursorVisible="true"
+            android:paddingLeft="14dp"
+            android:singleLine="true"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            app:layout_constraintLeft_toRightOf="@+id/line"
+            app:layout_constraintRight_toLeftOf="@+id/line"
+            app:layout_constraintTop_toBottomOf="@+id/txtParticipationPeriod" />
+
+        <TextView
+            android:id="@+id/txtParticipationField"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="참여분야"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edtTxtToYear" />
+
+        <Spinner
+            android:id="@+id/spinnerParticipationField"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginTop="7dp"
+            android:background="@drawable/border"
+            android:entries="@array/field"
+            android:paddingLeft="14dp"
+            android:spinnerMode="dropdown"
+            android:popupTheme="@color/black"
+            android:popupBackground="#FFFFFF"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtParticipationField" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

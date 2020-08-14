@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="field">
+        <item>안드로이드</item>
+        <item>iOS</item>
+        <item>웹</item>
+    </string-array>
+</resources>
